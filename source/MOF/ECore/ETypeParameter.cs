@@ -8,6 +8,6 @@ namespace MOF.ECore
 {
     public interface ETypeParameter : ENamedElement
     {
-        //EList<EGenericType> getEBounds();
+        IList<EGenericType> EBounds { get; }
     }
 }

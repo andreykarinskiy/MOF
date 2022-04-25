@@ -8,12 +8,12 @@ namespace MOF.ECore
 {
     public interface EEnum : EDataType
     {
-        //EList<EEnumLiteral> getELiterals();
+        IList<EEnumLiteral> ELiterals { get; }
 
-        //EEnumLiteral getEEnumLiteral(String name);
+        EEnumLiteral GetEEnumLiteral(string name);
 
-        //EEnumLiteral getEEnumLiteral(int value);
+        EEnumLiteral GetEEnumLiteral(int value);
 
-        //EEnumLiteral getEEnumLiteralByLiteral(String literal);
+        EEnumLiteral GetEEnumLiteralByLiteral(string literal);
     }
 }

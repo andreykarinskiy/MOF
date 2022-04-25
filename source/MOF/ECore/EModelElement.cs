@@ -8,8 +8,8 @@ namespace MOF.ECore
 {
     public interface EModelElement : EObject
     {
-        //EList<EAnnotation> getEAnnotations();
+        IList<EAnnotation> EAnnotations { get; }
 
-        //EAnnotation getEAnnotation(String source);
+        EAnnotation GetEAnnotation(string source);
     }
 }

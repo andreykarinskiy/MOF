@@ -8,32 +8,20 @@ namespace MOF.ECore
 {
     public interface ETypedElement : ENamedElement
     {
-        //boolean isOrdered();
+        bool IsOrdered { get; set; }
 
-        //void setOrdered(boolean value);
+        bool IsUnique { get; set; }
 
-        //boolean isUnique();
+        int LowerBound { get; set; }
 
-        //void setUnique(boolean value);
+        int UpperBound { get; set; }
 
-        //int getLowerBound();
+        bool IsMany { get; }
 
-        //void setLowerBound(int value);
+        bool IsRequired { get; }
 
-        //int getUpperBound();
+        EClassifier EType { get; set; }
 
-        //void setUpperBound(int value);
-
-        //boolean isMany();
-
-        //boolean isRequired();
-
-        //EClassifier getEType();
-
-        //void setEType(EClassifier value);
-
-        //EGenericType getEGenericType();
-
-        //void setEGenericType(EGenericType value);
+        EGenericType EGenericType { get; set; }
     }
 }

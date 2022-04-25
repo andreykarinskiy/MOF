@@ -8,34 +8,34 @@ namespace MOF.ECore
 {
     public interface EObject
     {
-        //EClass eClass();
+        EClass eClass { get; }
 
-        //Resource eResource();
+        //Resource eResource { get; }
 
-        //EObject eContainer();
+        EObject eContainer { get; }
 
-        //EStructuralFeature eContainingFeature();
+        EStructuralFeature eContainingFeature { get; }
 
-        //EReference eContainmentFeature();
+        EReference eContainmentFeature { get; }
 
-        //EList<EObject> eContents();
+        IList<EObject> eContents { get; }
 
-        //TreeIterator<EObject> eAllContents();
+        IEnumerable<EObject> eAllContents { get; }
 
-        //boolean eIsProxy();
+        bool eIsProxy { get; }
 
-        //EList<EObject> eCrossReferences();
+        IList<EObject> eCrossReferences { get; }
 
-        //Object eGet(EStructuralFeature feature);
+        object eGet(EStructuralFeature feature);
 
-        //Object eGet(EStructuralFeature feature, boolean resolve);
+        object eGet(EStructuralFeature feature, bool resolve);
 
-        //void eSet(EStructuralFeature feature, Object newValue);
+        void eSet(EStructuralFeature feature, object newValue);
 
-        //boolean eIsSet(EStructuralFeature feature);
+        bool eIsSet(EStructuralFeature feature);
 
-        //void eUnset(EStructuralFeature feature);
+        void eUnset(EStructuralFeature feature);
 
-        //Object eInvoke(EOperation operation, EList<?> arguments) throws InvocationTargetException;
+        object eInvoke(EOperation operation, IList<object> arguments);
     }
 }

@@ -8,26 +8,22 @@ namespace MOF.ECore
 {
     public interface EClassifier : ENamedElement
     {
-        //String getInstanceClassName();
+        string InstanceClassName { get; set; }
 
-        //void setInstanceClassName(String value);
+        Type InstanceClass { get; set; }
 
-        //Class<?> getInstanceClass();
+        object DefaultValue { get; }
 
-        //void setInstanceClass(Class<?> value);
+        String getInstanceTypeName();
 
-        //Object getDefaultValue();
+        void setInstanceTypeName(String value);
 
-        //String getInstanceTypeName();
+        EPackage EPackage { get; }
 
-        //void setInstanceTypeName(String value);
+        IList<ETypeParameter> ETypeParameters { get; }
 
-        //EPackage getEPackage();
+        bool IsInstance(object instance);
 
-        //EList<ETypeParameter> getETypeParameters();
-
-        //boolean isInstance(Object object);
-
-        //int getClassifierID();
+        int ClassifierID { get; }
     }
 }

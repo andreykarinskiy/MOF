@@ -8,60 +8,56 @@ namespace MOF.ECore
 {
     public interface EClass : EClassifier
     {
-        //boolean isAbstract();
+        bool IsAbstract { get; set; }
 
-        //void setAbstract(boolean value);
+        bool IsInterface { get; set; }
 
-        //boolean isInterface();
+        IList<EClass> ESuperTypes { get; }
 
-        //void setInterface(boolean value);
+        IList<EClass> EAllSuperTypes { get; }
 
-        //EList<EClass> getESuperTypes();
+        EAttribute EIDAttribute { get; }
 
-        //EList<EClass> getEAllSuperTypes();
+        IList<EStructuralFeature> EStructuralFeatures { get; }
 
-        //EAttribute getEIDAttribute();
+        IList<EGenericType> EGenericSuperTypes { get; }
 
-        //EList<EStructuralFeature> getEStructuralFeatures();
+        IList<EGenericType> EAllGenericSuperTypes { get; }
 
-        //EList<EGenericType> getEGenericSuperTypes();
+        IList<EAttribute> EAttributes { get; }
 
-        //EList<EGenericType> getEAllGenericSuperTypes();
+        IList<EAttribute> EAllAttributes { get; }
 
-        //EList<EAttribute> getEAttributes();
+        IList<EReference> EReferences { get; }
 
-        //EList<EAttribute> getEAllAttributes();
+        IList<EReference> EAllReferences { get; }
 
-        //EList<EReference> getEReferences();
+        IList<EReference> EAllContainments { get; }
 
-        //EList<EReference> getEAllReferences();
+        IList<EStructuralFeature> EAllStructuralFeatures { get; }
 
-        //EList<EReference> getEAllContainments();
+        IList<EOperation> EOperations { get; }
 
-        //EList<EStructuralFeature> getEAllStructuralFeatures();
+        IList<EOperation> EAllOperations { get; }
 
-        //EList<EOperation> getEOperations();
+        bool IsSuperTypeOf(EClass someClass);
 
-        //EList<EOperation> getEAllOperations();
+        int FeatureCount { get; }
 
-        //boolean isSuperTypeOf(EClass someClass);
+        EStructuralFeature GetEStructuralFeature(int featureID);
 
-        //int getFeatureCount();
+        EStructuralFeature GetEStructuralFeature(string featureName);
 
-        //EStructuralFeature getEStructuralFeature(int featureID);
+        int OperationCount { get; }
 
-        //EStructuralFeature getEStructuralFeature(String featureName);
+        EOperation GetEOperation(int operationID);
 
-        //int getOperationCount();
+        int GetOperationID(EOperation operation);
 
-        //EOperation getEOperation(int operationID);
+        EOperation GetOverride(EOperation operation);
 
-        //int getOperationID(EOperation operation);
+        EGenericType GetFeatureType(EStructuralFeature feature);
 
-        //EOperation getOverride(EOperation operation);
-
-        //EGenericType getFeatureType(EStructuralFeature feature);
-
-        //int getFeatureID(EStructuralFeature feature);
+        int GetFeatureID(EStructuralFeature feature);
     }
 }

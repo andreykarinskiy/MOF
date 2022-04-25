@@ -8,26 +8,18 @@ namespace MOF.ECore
 {
     public interface EGenericType : EObject
     {
-        //EGenericType getEUpperBound();
+        EGenericType EUpperBound { get; set; }
 
-        //void setEUpperBound(EGenericType value);
+        IList<EGenericType> ETypeArguments { get; }
 
-        //EList<EGenericType> getETypeArguments();
+        EClassifier ERawType { get; }
 
-        //EClassifier getERawType();
+        EGenericType ELowerBound { get; set; }
 
-        //EGenericType getELowerBound();
+        ETypeParameter ETypeParameter { get; set; }
 
-        //void setELowerBound(EGenericType value);
+        EClassifier EClassifier { get; set; }
 
-        //ETypeParameter getETypeParameter();
-
-        //void setETypeParameter(ETypeParameter value);
-
-        //EClassifier getEClassifier();
-
-        //void setEClassifier(EClassifier value);
-
-        //boolean isInstance(Object object);
+        bool IsInstance(object instance);
     }
 }

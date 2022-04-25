@@ -8,18 +8,14 @@ namespace MOF.ECore
 {
     public interface EEnumLiteral : ENamedElement //, Enumerator
     {
-        //int getValue();
-
-        //void setValue(int value);
+        int Value { get; set; }
 
         //Enumerator getInstance();
 
         //void setInstance(Enumerator value);
 
-        //String getLiteral();
+        string Literal { get; set; }
 
-        //void setLiteral(String value);
-
-        //EEnum getEEnum();
+        EEnum EEnum { get; }
     }
 }

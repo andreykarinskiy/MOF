@@ -8,22 +8,16 @@ namespace MOF.ECore
 {
     public interface EReference : EStructuralFeature
     {
-        //boolean isContainment();
+        bool IsContainment { get; set; }
 
-        //void setContainment(boolean value);
+        bool IsContainer { get; }
 
-        //boolean isContainer();
+        bool IsResolveProxies { get; set; }
 
-        //boolean isResolveProxies();
+        EReference EOpposite { get; set; }
 
-        //void setResolveProxies(boolean value);
+        EClass EReferenceType { get; }
 
-        //EReference getEOpposite();
-
-        //void setEOpposite(EReference value);
-
-        //EClass getEReferenceType();
-
-        //EList<EAttribute> getEKeys();
+        IList<EAttribute> EKeys { get; }
     }
 }

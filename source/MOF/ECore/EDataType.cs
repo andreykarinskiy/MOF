@@ -8,8 +8,6 @@ namespace MOF.ECore
 {
     public interface EDataType : EClassifier
     {
-        //boolean isSerializable();
-
-        //void setSerializable(boolean value);
+        bool IsSerializable { get; set; }
     }
 }

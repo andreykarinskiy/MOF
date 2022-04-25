@@ -8,18 +8,14 @@ namespace MOF.ECore
 {
     public interface EAnnotation : EModelElement
     {
-        //String getSource();
+        string Source { get; set; }
 
-        //void setSource(String value);
+        IDictionary<string, string> Details { get; }
 
-        //EMap<String, String> getDetails();
+        EModelElement EModelElement { get; set; }
 
-        //EModelElement getEModelElement();
+        IList<EObject> Contents { get; }
 
-        //void setEModelElement(EModelElement value);
-
-        //EList<EObject> getContents();
-
-        //EList<EObject> getReferences();
+        IList<EObject> References { get; }
     }
 }

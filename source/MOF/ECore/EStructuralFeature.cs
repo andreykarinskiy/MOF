@@ -8,52 +8,36 @@ namespace MOF.ECore
 {
     public interface EStructuralFeature : ETypedElement
     {
-//          boolean isTransient();
+        bool IsTransient { get; set; }
 
-//        void setTransient(boolean value);
+        bool IsVolatile { get; set; }
 
-//        boolean isVolatile();
+        bool IsChangeable { get; set; }
 
-//        void setVolatile(boolean value);
+        string DefaultValueLiteral { get; set; }
 
-//        boolean isChangeable();
+        object DefaultValue { get; set; }
 
-//        void setChangeable(boolean value);
+        bool IsUnsettable { get; set; }
 
-//        String getDefaultValueLiteral();
+        bool IsDerived { get; set; }
 
-//        void setDefaultValueLiteral(String value);
+        EClass EContainingClass { get; }
 
-//        Object getDefaultValue();
+        int FeatureID { get; }
 
-//        void setDefaultValue(Object value);
+        Type ContainerClass { get; }
 
-//        boolean isUnsettable();
+        bool IsFeatureMap { get; }
 
-//        void setUnsettable(boolean value);
+        public bool IsID { get; }
 
-//        boolean isDerived();
+        public bool IsResolveProxies { get; }
 
-//        void setDerived(boolean value);
+        public bool IsContainer { get; }
 
-//        EClass getEContainingClass();
+        public bool IsContainment { get; }
 
-//        int getFeatureID();
-
-//        Class<?> getContainerClass();
-
-
-
-//boolean isFeatureMap();
-
-//public boolean isID();
-
-//public boolean isResolveProxies();
-
-//public boolean isContainer();
-
-//public boolean isContainment();
-
-//public EReference getEOpposite();
+        public EReference EOpposite { get; }
     }
 }

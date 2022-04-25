@@ -8,18 +8,18 @@ namespace MOF.ECore
 {
     public interface EOperation : ETypedElement
     {
-        //EClass getEContainingClass();
+        EClass EContainingClass { get; }
 
-        //EList<EParameter> getEParameters();
+        IList<EParameter> EParameters { get; }
 
-        //EList<EClassifier> getEExceptions();
+        IList<EClassifier> EExceptions { get; }
 
-        //EList<EGenericType> getEGenericExceptions();
+        IList<EGenericType> EGenericExceptions { get; }
 
-        //int getOperationID();
+        int OperationID { get; }
 
-        //boolean isOverrideOf(EOperation someOperation);
+        bool IsOverrideOf(EOperation someOperation);
 
-        //EList<ETypeParameter> getETypeParameters();
+        IList<ETypeParameter> ETypeParameters { get; }
     }
 }

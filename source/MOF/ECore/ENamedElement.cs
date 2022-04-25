@@ -8,8 +8,6 @@ namespace MOF.ECore
 {
     public interface ENamedElement : EModelElement
     {
-        //String getName();
-
-        //void setName(String value);
+        string Name { get; set; }
     }
 }

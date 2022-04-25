@@ -8,6 +8,6 @@ namespace MOF.ECore
 {
     public interface EParameter : ETypedElement
     {
-        //EOperation getEOperation();
+        EOperation EOperation { get; }
     }
 }

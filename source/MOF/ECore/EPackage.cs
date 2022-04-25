@@ -8,24 +8,18 @@ namespace MOF.ECore
 {
     public interface EPackage : ENamedElement
     {
-        //String getNsURI();
+        string NsURI { get; set; }
 
-        //void setNsURI(String value);
+        string NsPrefix { get; set; }
 
-        //String getNsPrefix();
+        EFactory EFactoryInstance { get; }
 
-        //void setNsPrefix(String value);
+        IList<EClassifier> EClassifiers { get; }
 
-        //EFactory getEFactoryInstance();
+        IList<EPackage> ESubpackages { get; }
 
-        //void setEFactoryInstance(EFactory value);
+        EPackage ESuperPackage { get; }
 
-        //EList<EClassifier> getEClassifiers();
-
-        //EList<EPackage> getESubpackages();
-
-        //EPackage getESuperPackage();
-
-        //EClassifier getEClassifier(String name);
+        EClassifier GetEClassifier(string name);
     }
 }
