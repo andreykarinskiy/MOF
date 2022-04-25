@@ -8,7 +8,7 @@ namespace MOF.ECore
 {
     public interface EAttribute : EStructuralFeature
     {
-        bool IsID { get; set; }
+        //bool IsID { get; set; }
 
         EDataType EAttributeType { get; }
     }

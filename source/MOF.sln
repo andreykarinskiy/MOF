@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOF", "MOF\MOF.csproj", "{D1F8BBAD-6303-4A6B-B1BE-8EC5DC09B1AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOF", "MOF\MOF.csproj", "{D1F8BBAD-6303-4A6B-B1BE-8EC5DC09B1AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOF.Tests", "MOF.Tests\MOF.Tests.csproj", "{A65DCC22-6E75-4224-B497-97AC26DE4A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOF.Tests", "MOF.Tests\MOF.Tests.csproj", "{A65DCC22-6E75-4224-B497-97AC26DE4A04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

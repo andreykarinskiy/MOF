@@ -8,13 +8,13 @@ namespace MOF.ECore
 {
     public interface EReference : EStructuralFeature
     {
-        bool IsContainment { get; set; }
+        //bool IsContainment { get; set; }
 
-        bool IsContainer { get; }
+        //bool IsContainer { get; }
 
-        bool IsResolveProxies { get; set; }
+        //bool IsResolveProxies { get; set; }
 
-        EReference EOpposite { get; set; }
+        //EReference EOpposite { get; set; }
 
         EClass EReferenceType { get; }
 
