@@ -1,28 +1,25 @@
-﻿using MOF.Common.Util;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MOF.ECore
 {
-    /// <summary>
-    /// A representation of the model object <see cref="EModelElement"/>.
-    /// </summary>
-    // https://git.eclipse.org/r/plugins/gitiles/emf/org.eclipse.emf/+/refs/heads/master/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/EAnnotation.java
     public interface EAnnotation : EModelElement
     {
-        /// <summary>
-        /// Returns the value of the EAnnotations containment reference list.
-        /// </summary>
-        /// <returns>
-        /// return the value of the EAnnotations containment reference list.
-        /// </returns>
-        EList<EAnnotation> GetEAnnotations();
+        //String getSource();
 
-        /// <summary>
-        /// Return the annotation with a matching attribute.
-        /// </summary>
-        /// <param name="source"></param>
-        /// <returns>
-        /// The annotation with a matching source attribute.
-        /// </returns>
-        EAnnotation GetEAnnotation(string source);
+        //void setSource(String value);
+
+        //EMap<String, String> getDetails();
+
+        //EModelElement getEModelElement();
+
+        //void setEModelElement(EModelElement value);
+
+        //EList<EObject> getContents();
+
+        //EList<EObject> getReferences();
     }
 }

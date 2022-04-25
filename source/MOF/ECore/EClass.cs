@@ -1,5 +1,4 @@
-﻿using MOF.Common.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,166 +6,62 @@ using System.Threading.Tasks;
 
 namespace MOF.ECore
 {
-    /// <summary>
-    /// A representation of the model object '<em><b>EClass</b></em>'.
-    /// </summary>
-    // https://git.eclipse.org/r/plugins/gitiles/emf/org.eclipse.emf/+/refs/heads/master/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/EClass.java
     public interface EClass : EClassifier
     {
-        /// <summary>
-        /// Returns the value of the Abstract attribute.
-        /// For an abstract class,
-        /// the generated implementation class will be abstract,
-        /// and the generated factory will not provide support for creating an instance.
-        /// </summary>
-        /// <returns></returns>
-        bool IsAbstract();
+        //boolean isAbstract();
 
-        void SetAbstract(bool value);
+        //void setAbstract(boolean value);
 
-        /// <summary>
-        /// Returns the value of the Interface attribute.
-        /// For an interface class,
-        /// there will be no generated implementation class.
-        /// </summary>
-        /// <returns></returns>
-        bool IsInterface();
-        
-        void SetInterface(bool value);
+        //boolean isInterface();
 
-        /// <summary>
-        /// Returns the value of the ESuper Types reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EClass> GetESuperTypes();
+        //void setInterface(boolean value);
 
-        /// <summary>
-        /// Returns the value of the EAll Super Types reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EClass> GetEAllSuperTypes();
+        //EList<EClass> getESuperTypes();
 
-        /// <summary>
-        /// Returns the value of the EID Attribute reference.
-        /// </summary>
-        /// <returns></returns>
-        EAttribute GetEIDAttribute();
+        //EList<EClass> getEAllSuperTypes();
 
-        /// <summary>
-        /// Returns the value of the >EStructural Features containment reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EStructuralFeature> GetEStructuralFeatures();
+        //EAttribute getEIDAttribute();
 
-        /// <summary>
-        /// Returns the value of the EGeneric Super Types containment reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EGenericType> GetEGenericSuperTypes();
+        //EList<EStructuralFeature> getEStructuralFeatures();
 
-        /// <summary>
-        /// Returns the value of the EAll Generic Super Types reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EGenericType> GetEAllGenericSuperTypes();
+        //EList<EGenericType> getEGenericSuperTypes();
 
-        /// <summary>
-        /// Returns the value of the EAttributes reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EAttribute> GetEAttributes();
+        //EList<EGenericType> getEAllGenericSuperTypes();
 
-        /// <summary>
-        /// Returns the value of the EAll Attributes reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EAttribute> GetEAllAttributes();
+        //EList<EAttribute> getEAttributes();
 
-        /// <summary>
-        /// Returns the value of the EReferences reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EReference> GetEReferences();
+        //EList<EAttribute> getEAllAttributes();
 
-        /// <summary>
-        /// Returns the value of the EAll References reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EReference> GetEAllReferences();
+        //EList<EReference> getEReferences();
 
-        /// <summary>
-        /// Returns the value of the EAll Containments reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EReference> GetEAllContainments();
+        //EList<EReference> getEAllReferences();
 
-        /// <summary>
-        /// Returns the value of the EAll Structural Features reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EStructuralFeature> GetEAllStructuralFeatures();
+        //EList<EReference> getEAllContainments();
 
-        /// <summary>
-        /// Returns the value of the EOperations containment reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EOperation> GetEOperations();
+        //EList<EStructuralFeature> getEAllStructuralFeatures();
 
-        /// <summary>
-        /// Returns the value of the EAll Operations reference list.
-        /// </summary>
-        /// <returns></returns>
-        EList<EOperation> GetEAllOperations();
+        //EList<EOperation> getEOperations();
 
-        /// <summary>
-        /// Returns whether this class is the same as, or a super type of, some other class.
-        /// </summary>
-        bool IsSuperTypeOf(EClass someClass);
+        //EList<EOperation> getEAllOperations();
 
-        /// <summary>
-        /// Returns the number of features.
-        /// </summary>
-        /// <returns></returns>
-        int GetFeatureCount();
+        //boolean isSuperTypeOf(EClass someClass);
 
-        /// <summary>
-        /// Returns the feature with this ID.
-        /// </summary>
-        EStructuralFeature GetEStructuralFeature(int featureID);
+        //int getFeatureCount();
 
-        /// <summary>
-        /// Returns the feature with this name.
-        /// </summary>
-        EStructuralFeature GetEStructuralFeature(string featureName);
+        //EStructuralFeature getEStructuralFeature(int featureID);
 
-        /// <summary>
-        /// Returns the number of operations.
-        /// </summary>
-        int GetOperationCount();
+        //EStructuralFeature getEStructuralFeature(String featureName);
 
-        /// <summary>
-        /// Returns the operation with this ID.
-        /// </summary>
-        EOperation GetEOperation(int operationID);
+        //int getOperationCount();
 
-        /// <summary>
-        /// Returns the ID of the operation relative to this class, or -1 if the operation is not in this class.
-        /// </summary>
-        int GetOperationID(EOperation operation);
+        //EOperation getEOperation(int operationID);
 
-        /// <summary>
-        /// Returns the operation that overrides this operation.
-        /// </summary>
-        EOperation GetOverride(EOperation operation);
+        //int getOperationID(EOperation operation);
 
-        /// <summary>
-        /// Returns the generic type representing the effective {@link EcoreUtil#getReifiedType(EClass, EGenericType) reified type} of the feature in the context of this specific class.
-        /// </summary>
-        EGenericType GetFeatureType(EStructuralFeature feature);
+        //EOperation getOverride(EOperation operation);
 
-        /// <summary>
-        /// Returns the ID of the feature relative to this class, or -1 if the feature is not in this class.
-        /// </summary>
-        int GetFeatureID(EStructuralFeature feature);
+        //EGenericType getFeatureType(EStructuralFeature feature);
+
+        //int getFeatureID(EStructuralFeature feature);
     }
 }

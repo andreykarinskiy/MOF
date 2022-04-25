@@ -1,40 +1,41 @@
-﻿using MOF.Common;
-using MOF.Common.Util;
-using MOF.ECore.Resources;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MOF.ECore
 {
-    // https://git.eclipse.org/r/plugins/gitiles/emf/org.eclipse.emf/+/refs/heads/master/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/EObject.java
-    public interface EObject : Notifier
+    public interface EObject
     {
-        EClass eClass();
-        
-        Resource eResource();
-        
-        EObject eContainer();
-        
-        EStructuralFeature eContainingFeature();
-        
-        EReference eContainmentFeature();
+        //EClass eClass();
 
-        EList<EObject> eContents();
-        
-        IEnumerable<EObject> eAllContents();
-        
-        bool eIsProxy();
-        
-        EList<EObject> eCrossReferences();
-        
-        object eGet(EStructuralFeature feature);
-        
-        object eGet(EStructuralFeature feature, bool resolve);
-        
-        void eSet(EStructuralFeature feature, object newValue);
-        
-        bool eIsSet(EStructuralFeature feature);
-        
-        void eUnset(EStructuralFeature feature);
+        //Resource eResource();
 
-        object eInvoke(EOperation operation, EList<object> arguments);
+        //EObject eContainer();
+
+        //EStructuralFeature eContainingFeature();
+
+        //EReference eContainmentFeature();
+
+        //EList<EObject> eContents();
+
+        //TreeIterator<EObject> eAllContents();
+
+        //boolean eIsProxy();
+
+        //EList<EObject> eCrossReferences();
+
+        //Object eGet(EStructuralFeature feature);
+
+        //Object eGet(EStructuralFeature feature, boolean resolve);
+
+        //void eSet(EStructuralFeature feature, Object newValue);
+
+        //boolean eIsSet(EStructuralFeature feature);
+
+        //void eUnset(EStructuralFeature feature);
+
+        //Object eInvoke(EOperation operation, EList<?> arguments) throws InvocationTargetException;
     }
 }

@@ -1,32 +1,51 @@
-﻿namespace MOF.ECore
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MOF.ECore
 {
-    /// <summary>
-    /// A representation of the model object <b>EData Type</b>.
-    /// </summary>
-    // https://git.eclipse.org/r/plugins/gitiles/emf/org.eclipse.emf/+/refs/heads/master/plugins/org.eclipse.emf.ecore/src/org/eclipse/emf/ecore/EFactory.java
     public interface EFactory : EModelElement
     {
-        /// <summary>
-        /// Returns the value of the <b>EPackage</b> reference.
-        /// </summary>
-        /// <returns></returns>
-        EPackage GetEPackage();
-       
-        void SetEPackage(EPackage value);
+        EPackage getEPackage();
 
-        /// <summary>
-        /// Creates a new instance of the class and returns it.
-        /// </summary>
-        EObject Create(EClass eClass);
+        void setEPackage(EPackage value);
 
-        /// <summary>
-        /// Creates an instance of the data type from the literal value.
-        /// </summary>
-        object CreateFromString(EDataType eDataType, string literalValue);
+        EObject create(EClass eClass);
 
-        /// <summary>
-        /// Returns the literal value of the instance.
-        /// </summary>
-        string ConvertToString(EDataType eDataType, object instanceValue);
+        Object createFromString(EDataType eDataType, String literalValue);
+        
+        String convertToString(EDataType eDataType, Object instanceValue);
+
+        EObject createEObject();
+
+        EAttribute createEAttribute();
+
+        EAnnotation createEAnnotation();
+
+        EClass createEClass();
+        
+        EDataType createEDataType();
+
+        EParameter createEParameter();
+
+        EOperation createEOperation();
+
+        EPackage createEPackage();
+
+        EFactory createEFactory();
+
+        EEnumLiteral createEEnumLiteral();
+
+        EEnum createEEnum();
+
+        EReference createEReference();
+
+        EGenericType createEGenericType();
+
+        ETypeParameter createETypeParameter();
+        
+        // EcorePackage getEcorePackage();
     }
 }
