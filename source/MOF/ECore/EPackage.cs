@@ -18,7 +18,7 @@ namespace MOF.ECore
 
         IList<EPackage> ESubpackages { get; }
 
-        EPackage ESuperPackage { get; }
+        EPackage ESuperPackage { get; internal set; }
 
         EClassifier GetEClassifier(string name);
     }

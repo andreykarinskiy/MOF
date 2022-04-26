@@ -1,50 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MOF.ECore
+﻿namespace MOF.ECore
 {
     public interface EFactory : EModelElement
     {
-        EPackage getEPackage();
+        EPackage EPackage { get; set; }
 
-        void setEPackage(EPackage value);
+        EObject Create(EClass eClass);
 
-        EObject create(EClass eClass);
-
-        Object createFromString(EDataType eDataType, String literalValue);
+        object CreateFromString(EDataType eDataType, string literalValue);
         
-        String convertToString(EDataType eDataType, Object instanceValue);
+        string ConvertToString(EDataType eDataType, object instanceValue);
 
-        EObject createEObject();
+        EObject CreateEObject();
 
-        EAttribute createEAttribute();
+        EAttribute CreateEAttribute();
 
-        EAnnotation createEAnnotation();
+        EAnnotation CreateEAnnotation();
 
-        EClass createEClass();
+        EClass CreateEClass();
         
-        EDataType createEDataType();
+        EDataType CreateEDataType();
 
-        EParameter createEParameter();
+        EParameter CreateEParameter();
 
-        EOperation createEOperation();
+        EOperation CreateEOperation();
 
-        EPackage createEPackage();
+        EPackage CreateEPackage();
 
-        EFactory createEFactory();
+        EFactory CreateEFactory();
 
-        EEnumLiteral createEEnumLiteral();
+        EEnumLiteral CreateEEnumLiteral();
 
-        EEnum createEEnum();
+        EEnum CreateEEnum();
 
-        EReference createEReference();
+        EReference CreateEReference();
 
-        EGenericType createEGenericType();
+        EGenericType CreateEGenericType();
 
-        ETypeParameter createETypeParameter();
+        ETypeParameter CreateETypeParameter();
         
         // EcorePackage getEcorePackage();
     }
