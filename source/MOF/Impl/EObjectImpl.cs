@@ -9,48 +9,48 @@ namespace MOF.Impl
 {
     public abstract class EObjectImpl : EObject
     {
-        public EClass eClass => throw new NotImplementedException();
+        public EClass EClass => throw new NotImplementedException();
 
-        public EObject eContainer => throw new NotImplementedException();
+        public EObject EContainer => throw new NotImplementedException();
 
-        public EStructuralFeature eContainingFeature => throw new NotImplementedException();
+        public EStructuralFeature EContainingFeature => throw new NotImplementedException();
 
-        public EReference eContainmentFeature => throw new NotImplementedException();
+        public EReference EContainmentFeature => throw new NotImplementedException();
 
-        public IList<EObject> eContents => throw new NotImplementedException();
+        public IList<EObject> EContents => throw new NotImplementedException();
 
-        public IEnumerable<EObject> eAllContents => throw new NotImplementedException();
+        public IEnumerable<EObject> EAllContents => throw new NotImplementedException();
 
-        public bool eIsProxy => throw new NotImplementedException();
+        public bool EIsProxy => throw new NotImplementedException();
 
-        public IList<EObject> eCrossReferences => throw new NotImplementedException();
+        public IList<EObject> ECrossReferences => throw new NotImplementedException();
 
-        public object eGet(EStructuralFeature feature)
+        public object EGet(EStructuralFeature feature)
         {
             throw new NotImplementedException();
         }
 
-        public object eGet(EStructuralFeature feature, bool resolve)
+        public object EGet(EStructuralFeature feature, bool resolve)
         {
             throw new NotImplementedException();
         }
 
-        public object eInvoke(EOperation operation, IList<object> arguments)
+        public object EInvoke(EOperation operation, IList<object> arguments)
         {
             throw new NotImplementedException();
         }
 
-        public bool eIsSet(EStructuralFeature feature)
+        public bool EIsSet(EStructuralFeature feature)
         {
             throw new NotImplementedException();
         }
 
-        public void eSet(EStructuralFeature feature, object newValue)
+        public void ESet(EStructuralFeature feature, object newValue)
         {
             throw new NotImplementedException();
         }
 
-        public void eUnset(EStructuralFeature feature)
+        public void EUnset(EStructuralFeature feature)
         {
             throw new NotImplementedException();
         }

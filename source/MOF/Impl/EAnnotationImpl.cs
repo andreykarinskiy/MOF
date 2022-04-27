@@ -10,7 +10,7 @@ namespace MOF.Impl
 
         public IDictionary<string, string> Details => details.Value;
 
-        public EModelElement EModelElement { get; set; }
+        public EModelElement? EModelElement { get; set; }
         
         public IList<EObject> Contents => throw new NotImplementedException();
 

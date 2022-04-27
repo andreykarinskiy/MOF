@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MOF.ECore
+﻿namespace MOF.ECore
 {
+    /// <summary>
+    /// TODO
+    /// </summary>
     public interface ENamedElement : EModelElement
     {
+        /// <summary>
+        /// It represents the name of the element.
+        /// </summary>
         string Name { get; set; }
     }
 }

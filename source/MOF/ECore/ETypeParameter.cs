@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MOF.ECore
+﻿namespace MOF.ECore
 {
+    /// <summary>
+    /// TODO
+    /// </summary>
     public interface ETypeParameter : ENamedElement
     {
+        /// <summary>
+        /// It represents the bounds on the type of argument that be may be used to instantiate this parameter.
+        /// </summary>
         IList<EGenericType> EBounds { get; }
     }
 }

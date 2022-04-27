@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MOF.ECore
+﻿namespace MOF.ECore
 {
+    /// <summary>
+    /// TODO
+    /// </summary>
     public interface EReference : EStructuralFeature
     {
-        //bool IsContainment { get; set; }
-
-        //bool IsContainer { get; }
-
-        //bool IsResolveProxies { get; set; }
-
-        //EReference EOpposite { get; set; }
-
+        /// <summary>
+        /// A reference is a containment if it represents by-value content.
+        /// </summary>
         EClass EReferenceType { get; }
 
+        /// <summary>
+        /// This represents a subset of the attributes on the referenced type that 
+        /// uniquely identify an instance within this reference.
+        /// </summary>
         IList<EAttribute> EKeys { get; }
     }
 }

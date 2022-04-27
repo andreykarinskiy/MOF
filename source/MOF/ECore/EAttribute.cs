@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MOF.ECore
+﻿namespace MOF.ECore
 {
+    /// <summary>
+    /// TODO
+    /// </summary>
     public interface EAttribute : EStructuralFeature
     {
+        /// <summary>
+        /// The type of an attribute must always be a data type.
+        /// </summary>
         EDataType EAttributeType { get; }
     }
 }

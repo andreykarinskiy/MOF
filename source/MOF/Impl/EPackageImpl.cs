@@ -14,13 +14,13 @@ namespace MOF.Impl
 
         public string NsPrefix { get; set; } = eNS_PREFIX;
 
-        public EFactory EFactoryInstance { get; set; }
+        public EFactory? EFactoryInstance { get; set; }
 
         public IList<EClassifier> EClassifiers => throw new NotImplementedException();
 
         public IList<EPackage> ESubpackages => subPackages.Value;
 
-        public EPackage ESuperPackage { get; set; }
+        public EPackage? ESuperPackage { get; set; }
 
         public EClassifier GetEClassifier(string name)
         {

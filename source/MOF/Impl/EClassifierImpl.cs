@@ -1,9 +1,4 @@
 ﻿using MOF.ECore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MOF.Impl
 {
@@ -20,17 +15,9 @@ namespace MOF.Impl
 
         public int ClassifierID => throw new NotImplementedException();
 
-        public string getInstanceTypeName()
-        {
-            throw new NotImplementedException();
-        }
+        public string InstanceTypeName { get; set; } = string.Empty;
 
         public bool IsInstance(object instance)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setInstanceTypeName(string value)
         {
             throw new NotImplementedException();
         }
