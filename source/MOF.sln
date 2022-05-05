@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMI.Serialization", "XMI.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMI.Serialization.Tests", "XMI.Serialization.Tests\XMI.Serialization.Tests.csproj", "{08CF2A44-01D8-44D0-BB03-843ED01917B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOF.Serialization", "MOF.Serialization\MOF.Serialization.csproj", "{CE69C674-EE4F-45E0-A917-8E599406F09B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOF.Serialization.Tests", "MOF.Serialization.Tests\MOF.Serialization.Tests.csproj", "{0E583853-D365-42CE-8FD5-A326852112F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{08CF2A44-01D8-44D0-BB03-843ED01917B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08CF2A44-01D8-44D0-BB03-843ED01917B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08CF2A44-01D8-44D0-BB03-843ED01917B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE69C674-EE4F-45E0-A917-8E599406F09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE69C674-EE4F-45E0-A917-8E599406F09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE69C674-EE4F-45E0-A917-8E599406F09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE69C674-EE4F-45E0-A917-8E599406F09B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E583853-D365-42CE-8FD5-A326852112F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E583853-D365-42CE-8FD5-A326852112F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E583853-D365-42CE-8FD5-A326852112F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E583853-D365-42CE-8FD5-A326852112F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

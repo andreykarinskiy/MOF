@@ -1,9 +1,4 @@
 ﻿using MOF.ECore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MOF.Impl
 {
@@ -54,5 +49,7 @@ namespace MOF.Impl
         {
             throw new NotImplementedException();
         }
+
+        public abstract void Accept(IEcoreVisitor visitor);
     }
 }

@@ -1,1 +1,7 @@
-﻿<XMI version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:UML="http://schema.omg.org/spec/UML/2.1" />
+﻿<ecore:EPackage xmi:version="2.0" 
+				xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" 
+				xmlns:xmi="http://www.omg.org/XMI" 
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				name="model" 
+				nsPrefix="occi" 
+				nsURI="http://schemas.ogf.org/occi" />

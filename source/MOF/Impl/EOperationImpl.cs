@@ -21,6 +21,11 @@ namespace MOF.Impl
 
         public IList<ETypeParameter> ETypeParameters => throw new NotImplementedException();
 
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool IsOverrideOf(EOperation someOperation)
         {
             throw new NotImplementedException();

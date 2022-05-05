@@ -44,6 +44,11 @@ namespace MOF.Impl
 
         public int OperationCount => throw new NotImplementedException();
 
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
+
         public EOperation GetEOperation(int operationID)
         {
             throw new NotImplementedException();

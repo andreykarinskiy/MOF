@@ -6,6 +6,11 @@ namespace MOF.Impl
     {
         public EPackage EPackage { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
+
         public string ConvertToString(EDataType eDataType, object instanceValue)
         {
             throw new NotImplementedException();

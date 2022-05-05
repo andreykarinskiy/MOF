@@ -19,6 +19,11 @@ namespace MOF.Impl
         public ETypeParameter ETypeParameter { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public EClassifier EClassifier { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool IsInstance(object instance)
         {
             throw new NotImplementedException();

@@ -10,5 +10,9 @@ namespace MOF.Tests
 {
     public sealed class DummyObject : EModelElementImpl
     {
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

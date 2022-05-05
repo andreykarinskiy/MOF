@@ -130,5 +130,8 @@
         /// If single-valued, then an instance of the operation's type is returned, or possibly null.
         /// </summary>
         object EInvoke(EOperation operation, IList<object> arguments);
+
+
+        public void Accept(IEcoreVisitor visitor);
     }
 }

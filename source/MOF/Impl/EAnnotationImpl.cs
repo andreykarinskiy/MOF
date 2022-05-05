@@ -15,5 +15,10 @@ namespace MOF.Impl
         public IList<EObject> Contents => throw new NotImplementedException();
 
         public IList<EObject> References => throw new NotImplementedException();
+
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

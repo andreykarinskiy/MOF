@@ -10,5 +10,10 @@ namespace MOF.Impl
     public class ETypeParameterImpl : ENamedElementImpl, ETypeParameter
     {
         public IList<EGenericType> EBounds => throw new NotImplementedException();
+
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -22,6 +22,11 @@ namespace MOF.Impl
 
         public EPackage? ESuperPackage { get; set; }
 
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
+
         public EClassifier GetEClassifier(string name)
         {
             throw new NotImplementedException();

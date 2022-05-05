@@ -12,5 +12,10 @@ namespace MOF.Impl
         public EClass EReferenceType => throw new NotImplementedException();
 
         public IList<EAttribute> EKeys => throw new NotImplementedException();
+
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

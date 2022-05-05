@@ -13,5 +13,10 @@ namespace MOF.Impl
         public string Literal { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public EEnum EEnum => throw new NotImplementedException();
+
+        public override void Accept(IEcoreVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

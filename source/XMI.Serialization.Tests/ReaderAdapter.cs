@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace XMI.Serialization.Tests
 {
-    internal sealed class ReaderAdapter
+    public sealed class ReaderAdapter
     {
         private readonly MemoryStream stream;
         private readonly XmlWriter writer;
@@ -18,6 +18,7 @@ namespace XMI.Serialization.Tests
 
         public XElement AsXml()
         {
+            writer.Flush();
             stream.Seek(0, SeekOrigin.Begin);
             var element = XElement.Load(stream);
             return Normalize(element);
