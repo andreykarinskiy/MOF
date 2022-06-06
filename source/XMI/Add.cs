@@ -15,6 +15,6 @@ namespace XMI
     {
         public int Position { get; set; }
 		
-        public IList<string> Addition { get; set; }
+        public IList<string>? Addition { get; set; }
     }
 }
