@@ -3,7 +3,7 @@
     /// <summary>
     /// TODO
     /// </summary>
-    public interface EEnumLiteral : ENamedElement //, Enumerator
+    public interface EEnumLiteral : ENamedElement
     {
         /// <summary>
         /// It represents the int value of an enumerator.

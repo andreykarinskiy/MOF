@@ -1,5 +1,8 @@
 ﻿namespace MOF.ECore
 {
+    /// <summary>
+    /// Visitor contract for traversing hierarchy ECore elements.
+    /// </summary>
     public interface IEcoreVisitor
     {
         void Visit(EObject element);

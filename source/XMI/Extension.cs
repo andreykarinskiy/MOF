@@ -8,9 +8,9 @@ namespace XMI
     /// </summary>
     public sealed class Extension : IVisitable
     {
-        public string Extender { get; set; }
+        public string? Extender { get; set; }
 
-		public string ExtenderID { get; set; }
+		public string? ExtenderID { get; set; }
 
         public void Accept(IXmiVisitor visitor)
         {

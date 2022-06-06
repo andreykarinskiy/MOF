@@ -10,11 +10,11 @@ namespace XMI
         /// <summary>
         /// MOF::EObject or UML::Element.
         /// </summary>
-        public EObject Target { get; set; }
+        public EObject? Target { get; set; }
 
-        public Difference Container { get; set; }
+        public Difference? Container { get; set; }
 		
-		public IList<Difference> Differences { get; set; }
+		public IList<Difference>? Differences { get; set; }
 
         public void Accept(IXmiVisitor visitor)
         {

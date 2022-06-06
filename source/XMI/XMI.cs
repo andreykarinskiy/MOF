@@ -7,11 +7,11 @@ namespace XMI
     /// </summary>
     public sealed class XMI : IVisitable
     {
-        public Documentation Documentation { get; set; }
+        public Documentation? Documentation { get; set; }
 		
-        public IList<Difference> Difference { get; set; }
+        public IList<Difference>? Difference { get; set; }
 
-		public IList<Extension> Extension { get; set; }
+		public IList<Extension>? Extension { get; set; }
 
         public void Accept(IXmiVisitor visitor)
         {

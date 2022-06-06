@@ -13,21 +13,21 @@ namespace XMI
     /// </summary>
     public sealed class Documentation : IVisitable
     {
-        public string Contact { get; set; }
+        public string? Contact { get; set; }
 
-		public string Exporter { get; set; }
+		public string? Exporter { get; set; }
 
-        public string ExporterVersion { get; set; }
+        public string? ExporterVersion { get; set; }
 
-        public string ExporterID { get; set; }
+        public string? ExporterID { get; set; }
 
-        public string LongDescription { get; set; }
+        public string? LongDescription { get; set; }
 
-        public string ShortDescription { get; set; }
+        public string? ShortDescription { get; set; }
 
-        public string Notice { get; set; }
+        public string? Notice { get; set; }
 
-        public string Owner { get; set; }
+        public string? Owner { get; set; }
 
         public DateTime Timestamp { get; set; }
 

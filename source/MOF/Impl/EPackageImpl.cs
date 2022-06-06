@@ -9,7 +9,6 @@ namespace MOF.Impl
 
         private readonly Lazy<IList<EPackage>> subPackages = new(() => new List<EPackage>());
 
-
         public string NsURI { get; set; } = eNS_URI;
 
         public string NsPrefix { get; set; } = eNS_PREFIX;
