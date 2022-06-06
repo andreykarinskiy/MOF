@@ -24,10 +24,10 @@ namespace MOF.Impl
 
         public bool IsResolveProxies => throw new NotImplementedException();
 
-        public bool IsContainer => throw new NotImplementedException();
+        //public bool IsContainer => throw new NotImplementedException();
 
         public bool IsContainment => throw new NotImplementedException();
 
-        public EReference EOpposite => throw new NotImplementedException();
+        //public EReference EOpposite => throw new NotImplementedException();
     }
 }

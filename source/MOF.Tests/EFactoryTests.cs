@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using AutoBogus;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MOF.ECore;
 using MOF.Impl;

@@ -5,6 +5,14 @@
     /// </summary>
     public interface EReference : EStructuralFeature
     {
+        bool IsContainer { get; set; }
+
+        /// <summary>
+        /// Returns the value of the EOpposite reference.
+        /// It represent the other end of a bidirectional relation.
+        /// </summary>
+        EReference EOpposite { get; set; }
+
         /// <summary>
         /// A reference is a containment if it represents by-value content.
         /// </summary>

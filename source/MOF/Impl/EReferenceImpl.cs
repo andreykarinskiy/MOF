@@ -13,6 +13,10 @@ namespace MOF.Impl
 
         public IList<EAttribute> EKeys => throw new NotImplementedException();
 
+        public bool IsContainer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public EReference EOpposite { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public override void Accept(IEcoreVisitor visitor)
         {
             throw new NotImplementedException();
