@@ -1,13 +1,12 @@
 ﻿using MOF.ECore;
 using MOF.Impl;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MOF.Tests
 {
+    /// <summary>
+    /// Dummy object for unit tests.
+    /// </summary>
     public sealed class DummyObject : EModelElementImpl
     {
         public override void Accept(IEcoreVisitor visitor)

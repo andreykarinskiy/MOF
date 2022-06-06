@@ -35,7 +35,7 @@ namespace MOF.Tests
             element.Should().NotBeNull();
         }
 
-        private EObject CreateElementByType(EFactory factory, Type elementType)
+        private static EObject CreateElementByType(EFactory factory, Type elementType)
         {
             if (!elementType.IsInterface)
             {
