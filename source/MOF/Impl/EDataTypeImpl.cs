@@ -9,7 +9,7 @@ namespace MOF.Impl
 {
     public class EDataTypeImpl : EClassifierImpl, EDataType
     {
-        public bool IsSerializable { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool IsSerializable { get; set; }
 
         public override void Accept(IEcoreVisitor visitor)
         {

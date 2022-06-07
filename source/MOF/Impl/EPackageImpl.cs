@@ -8,6 +8,7 @@ namespace MOF.Impl
         private const string eNS_PREFIX = "ecore";
 
         private readonly Lazy<IList<EPackage>> subPackages = new(() => new List<EPackage>());
+        private readonly Lazy<IList<EClassifier>> classifiers = new(() => new List<EClassifier>());
 
         public string NsURI { get; set; } = eNS_URI;
 
@@ -15,7 +16,7 @@ namespace MOF.Impl
 
         public EFactory? EFactoryInstance { get; set; }
 
-        public IList<EClassifier> EClassifiers => throw new NotImplementedException();
+        public IList<EClassifier> EClassifiers => classifiers.Value;
 
         public IList<EPackage> ESubpackages => subPackages.Value;
 
