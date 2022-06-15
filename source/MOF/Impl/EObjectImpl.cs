@@ -4,6 +4,8 @@ namespace MOF.Impl
 {
     public abstract class EObjectImpl : EObject
     {
+        private readonly Lazy<List<EObject>> eContents = new(() => new List<EObject>());
+
         public EClass EClass => throw new NotImplementedException();
 
         public EObject EContainer => throw new NotImplementedException();
@@ -12,7 +14,7 @@ namespace MOF.Impl
 
         public EReference EContainmentFeature => throw new NotImplementedException();
 
-        public IList<EObject> EContents => throw new NotImplementedException();
+        public IList<EObject> EContents => eContents.Value;
 
         public IEnumerable<EObject> EAllContents => throw new NotImplementedException();
 

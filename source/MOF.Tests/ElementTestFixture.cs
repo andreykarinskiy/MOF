@@ -1,5 +1,6 @@
 ﻿using MOF.Common;
 using MOF.ECore;
+using MOF.Impl;
 
 namespace MOF.Tests
 {
@@ -8,6 +9,8 @@ namespace MOF.Tests
         where TElemetBuilder : ElementBuilder<TElement>, new()
     {
         protected readonly TElemetBuilder builder;
+
+        protected readonly EFactory eFactory = new DefaultEFactory();
 
         public ElementTestFixture()
         {

@@ -32,7 +32,7 @@
         /// Returns the value of the EPackage container reference. 
         /// It is bidirectional and its opposite is EClassifiers.
         /// </summary>
-        EPackage EPackage { get; }
+        EPackage EPackage { get; set; }
 
         /// <summary>
         /// A classifier can optionally introduce type parameters.

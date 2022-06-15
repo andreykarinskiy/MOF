@@ -41,7 +41,7 @@ namespace MOF.Tests
 
 #pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             return (EObject) genericMethod.Invoke(null, new object[] { null })!;
-#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
+#pragma warning restore CS8625
         }
     }
 }

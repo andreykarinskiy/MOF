@@ -9,10 +9,12 @@ namespace MOF.Impl
 {
     public sealed class EClassImpl : EClassifierImpl, EClass
     {
-        public bool IsAbstract { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private readonly Lazy<List<EClass>> superTypes = new(() => new List<EClass>());
+
+        public bool IsAbstract { get; set; }
         public bool IsInterface { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public IList<EClass> ESuperTypes => throw new NotImplementedException();
+        public IList<EClass> ESuperTypes => superTypes.Value;
 
         public IList<EClass> EAllSuperTypes => throw new NotImplementedException();
 
