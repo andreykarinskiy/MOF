@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 env:
-    COMPANY: nedra-digital
+    COMPANY: andreykarinskiy
     AUTHORS: andrey.karinski@nedra.digital
     PRODUCT: MOF
 
