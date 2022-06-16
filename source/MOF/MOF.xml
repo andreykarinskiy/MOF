@@ -1,0 +1,954 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MOF</name>
+    </assembly>
+    <members>
+        <member name="T:MOF.ECore.EAnnotation">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EAnnotation.Source">
+            <summary>
+            This will typically be a full URI representing the type of the annotation.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EAnnotation.Details">
+            <summary>
+            This represents tagged values.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EAnnotation.EModelElement">
+            <summary>
+            Returns the value of the EModelElement container reference. 
+            It is bidirectional and its opposite is EAnnotations.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EAnnotation.Contents">
+            <summary>
+            This represents arbitrary contained objects.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EAnnotation.References">
+            <summary>
+            This represents arbitrary referenced objects.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EAttribute">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EAttribute.EAttributeType">
+            <summary>
+            The type of an attribute must always be a data type.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EClass">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.IsAbstract">
+            <summary>
+            It represents whether the class is abstract in the C# sense. 
+            For an abstract class, the generated implementation class will be abstract,
+            and the generated factory will not provide support for creating an instance.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.IsInterface">
+            <summary>
+            It represents whether the class is an interface in the C# sense. 
+            For an interface class, there will be no generated implementation class.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.ESuperTypes">
+            <summary>
+            It represents the super types in the C# sense, i.e., 
+            the super class and the direct implemented interfaces, 
+            and is derived from the generic super types.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAllSuperTypes">
+            <summary>
+            It represents the closure of all inherited super types and is derived from the generic super types.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EIDAttribute">
+            <summary>
+            It represents the attribute that will be used as the ID of an instance.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EStructuralFeatures">
+            <summary>
+            The list contents are of type EStructuralFeature. 
+            It is bidirectional and its opposite is EContaining Class. 
+            It represents the modeled features local to this class.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EGenericSuperTypes">
+            <summary>
+            It represents the generic super types in the C# sense, i.e., 
+            the super class and the direct implemented interfaces. 
+            The super types list is derived from this one, i.e., 
+            it represents the erasure of each generic super type.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAllGenericSuperTypes">
+            <summary>
+            It represents the closure of all inherited generic super types. 
+            The all super types list is derived from this one, i.e., 
+            it represents the erasure of each generic super type.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAttributes">
+            <summary>
+            It represents the modeled attributes local to this class.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAllAttributes">
+            <summary>
+            It represents the closure of all attributes, inherited and local.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EReferences">
+            <summary>
+            It represents the modeled references local to this class.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAllReferences">
+            <summary>
+            It represents the closure of all references, inherited and local.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAllContainments">
+            <summary>
+            It represents the closure of all references, inherited and local, that are containments. 
+            These features will determine the EObject.eContents() of an instance.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAllStructuralFeatures">
+            <summary>
+            It represents the closure of all attributes and references, inherited and local.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EOperations">
+            <summary>
+            It represents the modeled operations local to this class.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.EAllOperations">
+            <summary>
+            It represents the closure of all operations, inherited and local.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClass.IsSuperTypeOf(MOF.ECore.EClass)">
+            <summary>
+            Returns whether this class is the same as, or a super type of, some other class.
+            </summary>
+            <param name="someClass">some other class</param>
+            <returns>whether this class is the same as, or a super type of, some other class.</returns>
+        </member>
+        <member name="P:MOF.ECore.EClass.FeatureCount">
+            <summary>
+            Returns the number of features.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClass.GetEStructuralFeature(System.Int32)">
+            <summary>
+            Returns the feature with this ID.
+            </summary>
+            <returns>the feature with this ID.</returns>
+        </member>
+        <member name="M:MOF.ECore.EClass.GetEStructuralFeature(System.String)">
+            <summary>
+            Returns the feature with this name.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClass.OperationCount">
+            <summary>
+            Returns the number of operations.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClass.GetEOperation(System.Int32)">
+            <summary>
+            Returns the operation with this ID.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClass.GetOperationID(MOF.ECore.EOperation)">
+            <summary>
+            Returns the ID of the operation relative to this class, or -1 if the operation is not in this class.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClass.GetOverride(MOF.ECore.EOperation)">
+            <summary>
+            Returns the operation that overrides this operation.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClass.GetFeatureType(MOF.ECore.EStructuralFeature)">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClass.GetFeatureID(MOF.ECore.EStructuralFeature)">
+            <summary>
+            Returns the ID of the feature relative to this class, or -1 if the feature is not in this class.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EClassifier">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClassifier.InstanceClassName">
+            <summary>
+            It represents the name of the C# instance class that this meta object represents.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClassifier.InstanceClass">
+            <summary>
+            It represents the actual Java instance class that this meta object represents.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClassifier.DefaultValue">
+            <summary>
+            The default value for the type, in the Java sense. 
+            For primitive types, it will be the C# primitive default wrapped appropriately. 
+            For enums, it will be the first enumerator. 
+            And for all other types derived from System.Object, it will be null.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClassifier.InstanceTypeName">
+            <summary>
+            It represents the parameterized C# type that this meta object represents.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClassifier.EPackage">
+            <summary>
+            Returns the value of the EPackage container reference. 
+            It is bidirectional and its opposite is EClassifiers.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClassifier.ETypeParameters">
+            <summary>
+            A classifier can optionally introduce type parameters.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EClassifier.IsInstance(System.Object)">
+            <summary>
+            Returns whether the object is an instance of this classifier.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EClassifier.ClassifierID">
+            <summary>
+            Returns the ID relative to the containing package.
+            </summary>
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.eNAME">
+            <summary>
+            The package name.
+            </summary>
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.eNS_URI">
+            <summary>
+            The package namespace URI.
+            </summary>
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.eNS_PREFIX">
+            <summary>
+            The package namespace name.
+            </summary>
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.eCONTENT_TYPE">
+            <summary>
+            The package content type ID.
+            </summary>
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EBigDecimal">
+            The meta object id for the '<em>EBig Decimal</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EBigInteger">
+            * The meta object id for the '<em>EBig Integer</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EE_LIST">
+            * The meta object id for the '<em>EE List</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.ERESOURCE">
+            * The meta object id for the '<em>EResource</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.ERESOURCE_SET">
+            * The meta object id for the '<em>EResource Set</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EBOOLEAN_OBJECT">
+            * The meta object id for the '<em>EBoolean Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.ECHARACTER_OBJECT">
+            * The meta object id for the '<em>ECharacter Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EDate">
+            * The meta object id for the '<em>EDate</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EDIAGNOSTIC_CHAIN">
+            * The meta object id for the '<em>EDiagnostic Chain</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EDOUBLE_OBJECT">
+            * The meta object id for the '<em>EDouble Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EFLOAT_OBJECT">
+            * The meta object id for the '<em>EFloat Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EINTEGER_OBJECT">
+            * The meta object id for the '<em>EInteger Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EBoolean">
+            * The meta object id for the '<em>EBoolean</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EBYTE_OBJECT">
+            * The meta object id for the '<em>EByte Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EByte">
+            * The meta object id for the '<em>EByte</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EBYTE_ARRAY">
+            * The meta object id for the '<em>EByte Array</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EChar">
+            * The meta object id for the '<em>EChar</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EDouble">
+            * The meta object id for the '<em>EDouble</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EFloat">
+            * The meta object id for the '<em>EFloat</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EInt">
+            * The meta object id for the '<em>EInt</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EJAVA_CLASS">
+            * The meta object id for the '<em>EJava Class</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EJAVA_OBJECT">
+            * The meta object id for the '<em>EJava Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.ELONG_OBJECT">
+            * The meta object id for the '<em>ELong Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EMAP">
+            * The meta object id for the '<em>EMap</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.ESHORT_OBJECT">
+            * The meta object id for the '<em>EShort Object</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.ELong">
+            * The meta object id for the '<em>ELong</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EShort">
+            * The meta object id for the '<em>EShort</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.ETREE_ITERATOR">
+            * The meta object id for the '<em>ETree Iterator</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EINVOCATION_TARGET_EXCEPTION">
+            * The meta object id for the '<em>EInvocation Target Exception</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EFEATURE_MAP_ENTRY">
+            * The meta object id for the '<em>EFeature Map Entry</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EENUMERATOR">
+            * The meta object id for the '<em>EEnumerator</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EFEATURE_MAP">
+            * The meta object id for the '<em>EFeature Map</em>' data type.
+        </member>
+        <member name="F:MOF.ECore.ECorePackage.EString">
+            * The meta object id for the '<em>EString</em>' data type.
+        </member>
+        <member name="T:MOF.ECore.EDataType">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EDataType.IsSerializable">
+            <summary>
+            It represents whether values of this type will be serialized. 
+            For a serializable data type, there will be factory methods of the form:
+            <code>
+            string ConvertXyzToString(EDataType metaObject, object instanceValue);
+            object CreateXyzFromString(EDataType metaObject, string initialValue);
+            </code>
+            in the generated factory implementation.Clients will typically need to hand write the bodies of these generated methods.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EEnum">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EEnum.ELiterals">
+            <summary>
+            The list contents are of type EEnumLiteral. 
+            It is bidirectional and its opposite is EEnum.
+            It represents the enumerators of the enumeration.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EEnum.GetEEnumLiteral(System.String)">
+            <summary>
+            Returns the enum literal with the given name, or null.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EEnum.GetEEnumLiteral(System.Int32)">
+            <summary>
+            Returns the enum literal with the given value, or null. 
+            The values may not be unique; it returns the first.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EEnum.GetEEnumLiteralByLiteral(System.String)">
+            <summary>
+            Returns the enum literal with the given literal value, or null.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EEnumLiteral">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EEnumLiteral.Value">
+            <summary>
+            It represents the int value of an enumerator.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EEnumLiteral.Literal">
+            <summary>
+            This is the literal, string value that represents this enumerator value. 
+            This is used in persisting instances of enumerated type. 
+            If set to null, it will return the name, instead.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EEnumLiteral.EEnum">
+            <summary>
+            It is bidirectional and its opposite is 'ELiterals'.
+            It represents the contain enumeration.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EFactory">
+            <summary>
+            A representation of the model object EFactory.
+            A factory is responsible for creating class instances, and for converting data type instances to and from String.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.Create(MOF.ECore.EClass)">
+            <summary>
+            Creates a new instance of the class and returns it.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateFromString(MOF.ECore.EDataType,System.String)">
+            <summary>
+            Creates an instance of the data type from the literal value.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.ConvertToString(MOF.ECore.EDataType,System.Object)">
+            <summary>
+             Returns the literal value of the instance.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEObject">
+            <summary>
+            Returns a new object of class EObject.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEAttribute">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEAnnotation">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEClass">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEDataType">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEParameter">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEOperation">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEPackage">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEFactory">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEEnumLiteral">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EFactory.CreateEEnum">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EGenericType">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EGenericType.EUpperBound">
+            <summary>
+            A generic type with an upper bound T, is equivalent to "T" in C#.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:MOF.ECore.EGenericType.ETypeArguments" -->
+        <member name="P:MOF.ECore.EGenericType.ERawType">
+            <summary>
+            This represents the erased or raw type of the generic type.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EGenericType.ELowerBound">
+            <summary>
+            A generic type with a lower bound T, is equivalent to "T" in C#.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EGenericType.ETypeParameter">
+            <summary>
+            The represents a reference to a type parameter.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EGenericType.EClassifier">
+            <summary>
+            The represents a reference to a classifier.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EModelElement">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EModelElement.EAnnotations">
+            <summary>
+            Returns the value of the EAnnotations containment reference list. 
+            The list contents are of type EAnnotation. 
+            It is bidirectional and its opposite is EModel Element. 
+            It represents additional associated information
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EModelElement.GetEAnnotation(System.String)">
+            <summary>
+            Return the annotation with a matching source attribute.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.ENamedElement">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ENamedElement.Name">
+            <summary>
+            It represents the name of the element.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EObject">
+            <summary>
+            EObject is the root of all modeled objects so all the method names start with "e" to distinguish the EMF methods from the client methods. 
+            It provides support for the behaviors and features common to all modeled objects.
+            It is a full participant of the common notification framework: org.eclipse.emf.common.notify. 
+            Any EObject is assumed to also implement InternalEObject, which provides lower-level access that 
+            is not necessarily suitable for general consumption but is required for maintaining the EMF support mechanisms. 
+            Implementations of EObject should extend BasicEObjectImpl or one of its derived classes because methods can and will be added to this API. 
+            The framework also assumes that implementations will not specialize #equals(Object) (nor #hashCode()) so that "==" 
+            can be always used for equality testing; EcoreUtil.equals should be used for doing structural equality testing.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.EClass">
+            <summary>
+            The meta class defines the features available for reflective access.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.EContainer">
+            <summary>
+            Returns the containing object, or null.
+            An object is contained by another object if it appears in the contents of that object. 
+            The object will be contained by a containment feature of the containing object.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.EContainingFeature">
+            <summary>
+            Returns the particular feature of the container that actually holds the object, or null, if there is no container. 
+            Because of support for wildcard content, this feature may be an attribute representing a feature map; 
+            in this case the object is referenced by the containment feature of an entry in the map, i.e., the eContainmentFeature.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.EContainmentFeature">
+            <summary>
+            Returns the containment feature that properly contains the object, or null, if there is no container. 
+            Because of support for wildcard content, this feature may not be a direct feature of the container's class, 
+            but rather a feature of an entry in a feature map feature of the container's class.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.EContents">
+            <summary>
+            Returns a list view of the content objects; it is unmodifiable.
+            This will be the list of EObjects determined by the contents of the containment features of this object's meta class.
+            Objects can, indirectly, be removed and will change to reflect container changes. 
+            The implicit tree of contents is also directly available.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.EAllContents">
+            <summary>
+            Returns a tree iterator that iterates over all the direct contents and indirect contents of this object.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.EIsProxy">
+            <summary>
+            Indicates whether this object is a proxy.
+            A proxy is an object that is defined in a Resource that has not been loaded.
+            An object may be a proxy either because proxy resolution was disabled when the object 
+            was accessed(see eGet(EStructuralFeature, boolean)) or because proxy resolution failed.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EObject.ECrossReferences">
+            <summary>
+            Returns a list view of the cross referenced objects; it is unmodifiable.
+            This will be the list of EObjects determined by the contents of the reference features 
+            of this object's meta class, excluding containment features and their opposites. 
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EObject.EGet(MOF.ECore.EStructuralFeature)">
+            <summary>
+            Returns the value of the given feature of this object.
+            It returns the resolved value.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EObject.EGet(MOF.ECore.EStructuralFeature,System.Boolean)">
+            <summary>
+            Returns the value of the given feature of the object; the value is optionally resolved before it is returned.
+            If the feature is many-valued, the result will be an EList and each object in the list will be an instance of the feature's type; 
+            the list's contents are not affected by resolve argument.
+            Otherwise the result directly will be an instance of the feature's type; if it is a proxy, it is resolved.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EObject.ESet(MOF.ECore.EStructuralFeature,System.Object)">
+            <summary>
+            Sets the value of the given feature of the object to the new value.
+            If the feature is many-valued, the new value must be an EList and each object in that list must be 
+            an instance of the feature's type; the existing contents are cleared and the contents of the new value are added. 
+            However, if the new value is the content list itself, or is modified as a side effect of modifying 
+            the content list (i.e., if it is a view on the content list), 
+            the behavior is undefined and will likely result in simply clearing the list. 
+            If the feature is single-valued, the new value directly must be an instance 
+            of the feature's type and it becomes the new value of the feature of the object. 
+            If the feature is unsettable, the modeled state becomes set; otherwise, 
+            the feature may still not considered set if the new value is the same as the default.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EObject.EIsSet(MOF.ECore.EStructuralFeature)">
+            <summary>
+            Returns whether the feature of the object is considered to be set.
+            If the feature is many-valued, the value must be an EList and the feature is considered set if the list is not empty.
+            If the feature is unsettable, the modeled state is directly available and is used.Otherwise, 
+            the unresolved value of the feature of the object is compared against the feature's default value or 
+            the meta class's default value, as appropriate; the feature is considered set if it's not the same as the default.
+            This property can affect serialization, since defaults are typically omitted in a compact serialization.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EObject.EUnset(MOF.ECore.EStructuralFeature)">
+            <summary>
+            Unsets the feature of the object.
+            If the feature is many-valued, the value must be an EList and that list is cleared.Otherwise, 
+            the value of the feature of the object is set to the feature's default value or the meta class's default value, as appropriate.
+            If the feature is unsettable, the modeled state becomes unset.
+            In any case, the feature will no longer be considered set.
+            </summary>
+            <param name="feature"></param>
+        </member>
+        <member name="M:MOF.ECore.EObject.EInvoke(MOF.ECore.EOperation,System.Collections.Generic.IList{System.Object})">
+            <summary>
+            Invokes the specified operation of the object. 
+            If the operation has parameters, then corresponding arguments must be supplied. 
+            There are no optional parameters in Ecore operations.
+            If the operation is a void operation, then on successful execution, the result of this invocation is null. 
+            Otherwise, if the operation is multi-valued, then an EList is returned (possibly empty). 
+            If single-valued, then an instance of the operation's type is returned, or possibly null.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EOperation">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EOperation.EContainingClass">
+            <summary>
+            Returns the value of the EContaining Class container reference. 
+            It is bidirectional and its opposite is EOperations.
+            It represents a method in the C# sense.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EOperation.EParameters">
+            <summary>
+            Returns the value of the EParameters containment reference list. 
+            The list contents are of type EParameter. 
+            It is bidirectional and its opposite is EOperation.
+            It represents the valid arguments for this operation.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EOperation.EExceptions">
+            <summary>
+            Returns the value of the EExceptions reference list. 
+            The list contents are of type EClassifier.
+            It represents the exceptions thrown by this operation and is derived from the generic exceptions.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EOperation.EGenericExceptions">
+            <summary>
+            The list contents are of type EGenericType.
+            It represents the generic exceptions thrown by this operation.
+            The exceptions list is derived from this one, i.e., it represents the erasure of each generic exception.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EOperation.OperationID">
+            <summary>
+            Returns the ID relative to the containing class.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EOperation.IsOverrideOf(MOF.ECore.EOperation)">
+            <summary>
+            Returns whether this operation is an override of some other operation.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EOperation.ETypeParameters">
+            <summary>
+            An operation can optionally introduce type parameters.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EPackage">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EPackage.NsURI">
+            <summary>
+            It represents the namespace URI, i.e., a universally unique 
+            identification of a particular package, much like an XML Schema target namespace. 
+            It will be used in an XMI serialization. 
+            It is typically registered with the global package registry.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EPackage.NsPrefix">
+            <summary>
+            It represents the preferred XMLNS prefix to be used for this package's the namespace URI. 
+            It will be used in an XMI serialization.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EPackage.EFactoryInstance">
+            <summary>
+            It this package's factory for creating modeled object instances.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EPackage.EClassifiers">
+            <summary>
+            It is bidirectional and its opposite is EPackage.
+            It represents the meta objects, i.e., classes and data types, defined in this package.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EPackage.ESubpackages">
+            <summary>
+            It is bidirectional and its opposite is ESuper Package.
+            It represents the nested packages contained by this package.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EPackage.ESuperPackage">
+            <summary>
+            It is bidirectional and its opposite is ESubpackages.
+            It represents the containing package of this package.
+            </summary>
+        </member>
+        <member name="M:MOF.ECore.EPackage.GetEClassifier(System.String)">
+            <summary>
+            Returns the classifier with the given name.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EParameter">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EParameter.EOperation">
+            <summary>
+            It is bidirectional and its opposite is EParameters.
+            It represents the containing operation.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EReference">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EReference.EOpposite">
+            <summary>
+            Returns the value of the EOpposite reference.
+            It represent the other end of a bidirectional relation.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EReference.EReferenceType">
+            <summary>
+            A reference is a containment if it represents by-value content.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EReference.EKeys">
+            <summary>
+            This represents a subset of the attributes on the referenced type that 
+            uniquely identify an instance within this reference.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.EStructuralFeature">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.IsTransient">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.IsVolatile">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.IsChangeable">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.DefaultValueLiteral">
+            <summary>
+            It represents the serialized form of the default value.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.DefaultValue">
+            <summary>
+            It represents the default value that feature must take on when an explicit value has not been set. 
+            Specifically, it may be non-null if the feature has an eType. 
+            If the defaultValueLiteral is null, it is simply the eType's intrinsic default value. 
+            Otherwise, if the eType is an EDataType and the defaultValueLiteral is non-null, 
+            it is the object created by the factory's 
+            <code>EFactory.CreateFromString(EDataType, string)</code> 
+            method when invoked with those two objects as parameters.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.IsUnsettable">
+            <summary>
+            An unsettable feature explicitly models the state of being set verses being unset and 
+            so provides a direct implementation for the reflective eIsSet. 
+            It is only applicable single-valued features. 
+            One effect of this setting is that, in addition to generating the methods getXyz 
+            and setXyz (if the feature is changeable), 
+            a reflective generator will generate the methods isSetXyz and unsetXyz.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.IsDerived">
+            <summary>
+            A derived feature typically computes its value from those of other features. 
+            It will typically be transient and will often be volatile and not changeable. 
+            The default copier won't copy it.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.EContainingClass">
+            <summary>
+            It is bidirectional and its opposite is EStructuralFeatures.
+            It represents the containing class of this feature.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.FeatureID">
+            <summary>
+            Returns the ID relative to the containing class.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.EStructuralFeature.ContainerClass">
+            <summary>
+            Returns the instance class of the containing class.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.ETypedElement">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.IsOrdered">
+            <summary>
+            It represents whether order is meaningful.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.IsUnique">
+            <summary>
+            It represents whether values must be unique.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.LowerBound">
+            <summary>
+            It represents the minimum number of values that must appear in a valid instance.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.UpperBound">
+            <summary>
+            The default value is "1".
+            It represents the maximum number of values that must appear in a valid instance. 
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.IsMany">
+            <summary>
+            It represents whether more than one value may appear in a valid instance.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.IsRequired">
+            <summary>
+            It represents whether at least one value is required for a valid instance.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.EType">
+            <summary>
+            It represents the type of the element and is derived from the generic type.
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypedElement.EGenericType">
+            <summary>
+            It represents the generic type of the element. 
+            The type is derived from this, i.e., it represents the erasure of the generic type.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.ETypeParameter">
+            <summary>
+            TODO
+            </summary>
+        </member>
+        <member name="P:MOF.ECore.ETypeParameter.EBounds">
+            <summary>
+            It represents the bounds on the type of argument that be may be used to instantiate this parameter.
+            </summary>
+        </member>
+        <member name="T:MOF.ECore.IEcoreVisitor">
+            <summary>
+            Visitor contract for traversing hierarchy ECore elements.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XMI</name>
+    </assembly>
+    <members>
+        <member name="T:XMI.Add">
+            <summary>
+            The Add class represents an addition to a target object in this document or
+            other documents. The target is constrained to
+            reference only one object. The position attribute indicates where to place the
+            addition relative to other XML elements of
+            that type within the target. The default, -1, indicates to add the new elements
+            at the end of those elements for the target
+            element. The addition attribute refers to the set of objects to be added. Both
+            of these attributes have the tag
+            org.omg.xmi.attribute set to “true.”
+            </summary>
+        </member>
+        <member name="T:XMI.Delete">
+            <summary>
+            The Delete class represents a deletion of the target set of objects in this
+            document or other documents.
+            </summary>
+        </member>
+        <member name="T:XMI.Difference">
+            <summary>
+            The Difference class is the superclass for the Add, Replace, and Delete classes.
+            </summary>
+        </member>
+        <member name="P:XMI.Difference.Target">
+            <summary>
+            MOF::EObject or UML::Element.
+            </summary>
+        </member>
+        <member name="T:XMI.Documentation">
+            <summary>
+            The Documentation class contains information about the XMI document or stream
+            being transmitted, for instance the
+            owner of the document, a contact person for the document, long and short
+            descriptions of the document, the exporter tool
+            which created the document, the version of the tool, the date and time the
+            document was created, and copyright or other
+            legal notices regarding the document. The data type of all the attributes of
+            Documentation is string except for the
+            timestamp which is DateTime.
+            </summary>
+        </member>
+        <member name="T:XMI.Extension">
+            <summary>
+            The Extension class is designed to contain extended information outside the
+            scope of the user model. Extensions are a
+            multivalued attribute of the XMI class and may also be embedded in specific
+            locations in an XMI document.
+            </summary>
+        </member>
+        <member name="T:XMI.Replace">
+            <summary>
+            The Replace class represents the removal of a target set of objects and the
+            addition of the objects referred to in the
+            replacement attribute. The position attribute indicates where to place the
+            replacements relative to other XML elements of
+            that type within their container (they should all be of the same XML type). The
+            default, -1, indicates to add the new
+            elements at the end of those elements for the target element. The replacement
+            attribute refers to the objects that will
+            replace the target elements. Both of these attributes have the tag org.omg.xmi.
+            attribute set to “true.” Note that, unlike Delete, the replaced elements are 
+            only removed from the container not deleted.
+            </summary>
+        </member>
+        <member name="T:XMI.XMI">
+            <summary>
+            The root level XML element for XMI documents containing only XMI data may be
+            the XMI element, but it must be the
+            XMI element if there are multiple elements.
+            </summary>
+        </member>
+    </members>
+</doc>

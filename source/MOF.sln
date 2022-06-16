@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOF.Tests", "MOF.Tests\MOF.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMI", "XMI\XMI.csproj", "{A1438A35-34A8-4AE5-809E-8E089022865D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMI.Tests", "XMI.Tests\XMI.Tests.csproj", "{4E17B2A7-F92A-4198-9D35-B20BF885B808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMI.Tests", "XMI.Tests\XMI.Tests.csproj", "{4E17B2A7-F92A-4198-9D35-B20BF885B808}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
