@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ "master" ]
 
+env:
+    COMPANY: nedra-digital
+    AUTHORS: andrey.karinski@nedra.digital
+    PRODUCT: MOF
+
 defaults:
   run:
     working-directory: ./source
@@ -17,13 +22,31 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Enable SemVer 
+      uses: dotnet/nbgv@master
+      id: nbgv
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+        source-url: https://nuget.pkg.github.com/${{env.COMPANY}}/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}     
+        
     - name: Restore dependencies
-      run: dotnet restore
+      run:
+        dotnet restore        
+       
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --nologo --no-restore -p:Version=${{steps.nbgv.outputs.SemVer2}}  
+      
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal      
+   
+    - name: Pack
+      run: dotnet pack -c Release -o out -p:PackageVersion=${{steps.nbgv.outputs.SemVer2}}
+      
+    - name: Publish
+      run: dotnet nuget push ./out/*.nupkg --skip-duplicate --no-symbols true
